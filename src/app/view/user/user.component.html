@@ -1,0 +1,42 @@
+<body class="bg-light">
+  <div class="py-3">
+    <div class="container">
+      <div class="row">
+        <div class="text-center col-md-7 mx-auto">
+          <h2><b>Usuário</b></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="py-2">
+    <div class="container">
+      <div class="row">
+        
+        <ng-container *ngFor="let user of users">
+          <div class="col-md-12" *ngIf="user.id == [getId]">
+            <a href="../"><button type="button" class="btn btn-secondary">Voltar</button></a> 
+            <hr>
+            <div class="list-group">
+              <a class="list-group-item list-group-item-action active list-group-item-info"> Informações do usuário </a>
+              <a class="list-group-item list-group-item-action">Name = {{ user.name }} </a>
+              <a class="list-group-item list-group-item-action">Username = {{ user.username }}</a>
+              <a class="list-group-item list-group-item-action">E-mail = {{ user.email }}</a>
+              <a class="list-group-item list-group-item-action">Street = {{ user.address.street }}</a>
+              <a class="list-group-item list-group-item-action">Suite = {{ user.address.suite }} </a>
+              <a class="list-group-item list-group-item-action">City = {{ user.address.city }}</a>
+              <a class="list-group-item list-group-item-action">Zipcode = {{ user.address.zipcode }}</a>
+              <a class="list-group-item list-group-item-action">Geo Lat = {{ user.address.geo.lat }}</a>
+              <a class="list-group-item list-group-item-action">Geo Lng = {{ user.address.geo.lat }}</a>
+              <a class="list-group-item list-group-item-action">Phone = {{ user.phone }}</a>
+              <a class="list-group-item list-group-item-action">Website = {{ user.website }}</a>
+              <a class="list-group-item list-group-item-action">Company = {{ user.company.name }}</a>
+              <a class="list-group-item list-group-item-action">CatchPhrase = {{ user.company.catchPhrase }}</a>
+              <a class="list-group-item list-group-item-action">Bs = {{ user.company.bs }}</a>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</body>
